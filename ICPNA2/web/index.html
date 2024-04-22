@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<style>
+        body {
+            background-color: #13293d; /* Azul oscuro */
+            color: white; /* Color de texto blanco */
+            font-family: Arial, sans-serif; /* Fuente */
+            text-align: center; /* Centrar el contenido */
+        }
+
+        table {
+            border-collapse: collapse; /* Colapsar bordes de la tabla */
+            width: 50%; /* Ancho de la tabla */
+            margin: 50px auto; /* Centrar la tabla horizontalmente */
+        }
+
+        table, th, td {
+            border: 2px solid #ff3d00; /* Borde de la tabla y celdas (rojo) */
+        }
+
+        th, td {
+            padding: 10px; /* Espaciado interno de las celdas */
+            text-align: left; /* Alineación del texto a la izquierda */
+        }
+
+        select, input[type="radio"], input[type="checkbox"], input[type="reset"], input[type="submit"] {
+            padding: 10px; /* Espaciado interno de los elementos de formulario */
+            margin: 10px; /* Margen entre los elementos de formulario */
+            border: 2px solid #ff3d00; /* Borde de los elementos de formulario (rojo) */
+            background-color: #ff3d00; /* Fondo de los elementos de formulario (rojo) */
+            color: white; /* Color de texto blanco */
+            cursor: pointer; /* Cursor de puntero al pasar por encima */
+        }
+
+        select:hover, input[type="radio"]:hover, input[type="checkbox"]:hover, input[type="reset"]:hover, input[type="submit"]:hover {
+            background-color: #ff5722; /* Cambio de color al pasar por encima (naranja) */
+        }
+    </style>
+
+<html>
+    <head>
+        <title>Matricula ICPNA</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <h1>MATRICULA ICPNA</h1> 
+    <body>
+        <form name="form" method="post" action="Matricula.jsp">
+            <table border="3">
+                <tr>
+                    <td>Seleccione horario:</td>
+                    <td>
+                        <select name="combo1">
+                            <option value="2:15-3:45">2:15-3:45</option>
+                            <option value="4:00-5:30">4:00-5:30</option>
+                            <option value="5:45-7:15">5:45-7:15</option>
+                            <option value="7:30-8:00">7:30-8:00</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Nivel</td>
+                    <td>
+                        <input type="radio" value="Basico" name="rbtnivel">Basico
+                        <input type="radio" value="Intermedio" name="rbtnivel">Intermedio
+                        <input type="radio" value="Avanzado" name="rbtnivel">Avanzado
+                    </td>
+                </tr>
+                <tr>
+                    <td>Seleccione sede</td>
+                    <td>
+                        <select name="combo2">
+                            <option value="1">Lima Norte</option>
+                            <option value="2">San Miguel</option>
+                            <option value="3">Satélite</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Alumno nuevo?</td>
+                    <td><input type="checkbox" name="chkalum"></td>
+                </tr>
+            </table>
+            <input type="reset" value="Nueva matricula">
+            <input type="submit" value="Matricularme">
+        </form>
+    </body>
+</html>
